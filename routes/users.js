@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
-var passport = require('passport');
 var jwt = require('jsonwebtoken');
 
 /* GET users listing. */
