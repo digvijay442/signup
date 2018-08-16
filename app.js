@@ -15,6 +15,12 @@ var app = express();
 //   credentials: true
 // }))
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+})
+
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://dbuser:di840340@ds121262.mlab.com:21262/signupdb_', { useNewUrlParser: true })
 
